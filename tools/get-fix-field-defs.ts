@@ -6,7 +6,7 @@ import { fixTypeToOpenApiMap } from '../types/fix-type-mapping';
 const parser = new Parser();
 
 export function getFixFieldDefinitionsFromFixOrchestraXml(): FixFieldAsOpenApiSchema[] {
-  const data = fs.readFileSync('./orchestra-repositories/full-clean-quickfixj-generated/OrchestraFIXLatest.xml', 'utf8');
+  const data = fs.readFileSync('OrchestraFIXLatest.xml', 'utf8');
   let parsedFixOrchestra: FixOrchestra;
 
   parser.parseString(data, (err, result) => {
